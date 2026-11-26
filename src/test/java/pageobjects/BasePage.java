@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utils.WaitHelper;
 
-public class BaseElements {
+public class BasePage {
     protected final WebDriver driver;
     protected final WaitHelper waitHelper;
 
@@ -18,20 +18,20 @@ public class BaseElements {
     // Логотип Stellar Burger
     private final By logoStellarBurger = By.cssSelector("div[class*='AppHeader_header__logo'] a");
 
-    public BaseElements(WebDriver driver){
+    public BasePage(WebDriver driver){
         this.driver = driver;
         this.waitHelper = new WaitHelper(driver);
     }
 
-    @Step
+    @Step("Нажать на кнопку Личный Кабинет")
     public void clickAccountButton(){
         waitHelper.waitForClickable(accountButton).click();
     }
-    @Step
+    @Step("Нажать на кнопку Конструктор")
     public void clickConstructorButton(){
         waitHelper.waitForClickable(constructorButton).click();
     }
-    @Step
+    @Step("Нажать на логотип")
     public void clickLogoButton(){
         waitHelper.waitForClickable(logoStellarBurger).click();
     }
