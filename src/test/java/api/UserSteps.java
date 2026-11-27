@@ -19,14 +19,14 @@ public class UserSteps {
 
     @Step("Авторизоваться через API")
     public Response login(User user) {
-        return given().baseUri(BASE_URL).contentType(ContentType.JSON)
+        return given().baseUri(BASE_URI).contentType(ContentType.JSON)
                 .body("{\"email\":\"" + user.getEmail() + "\",\"password\":\"" + user.getPassword() + "\"}")
                 .post(LOGIN_API);
     }
 
     @Step("Удалить пользователя через API")
     public Response delete(String accessToken) {
-        return given().baseUri(BASE_URL).header("Authorization", accessToken)
+        return given().baseUri(BASE_URI).header("Authorization", accessToken)
                 .delete(USER_API);
     }
 

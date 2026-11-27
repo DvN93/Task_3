@@ -28,8 +28,4 @@ public class RecoverPasswordPage extends BasePage{
         waitHelper.waitForClickable(loginLink).click();
     }
 
-    @Step("Проверить что отображается форма восстановления пароля")
-    public boolean isRegistrationFormDisplayed() {
-        return waitHelper.isElementDisplayed(recoverPasswordHeader);
-    }
 }

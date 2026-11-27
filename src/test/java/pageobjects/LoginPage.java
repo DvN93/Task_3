@@ -20,12 +20,6 @@ public class LoginPage extends BasePage {
     // Поле ввода пароля
     private final By passwordInput = By.xpath(".//label[text()='Пароль']/following-sibling::input");
 
-    // Кнопка зарегистрироваться
-    private final By registerLink = By.xpath(".//a[text()='Зарегистрироваться']");
-
-    // Кнопка восстановления пароля
-    private final By forgotPasswordLink = By.xpath(".//a[text()='Восстановить пароль']");
-
     public LoginPage(WebDriver driver){
         super(driver);
     }
@@ -48,16 +42,6 @@ public class LoginPage extends BasePage {
     @Step("Нажать на кнопку Войти на странице входа")
     public void clickLoginPageButton(){
         waitHelper.waitForClickable(loginPageButton).click();
-    }
-
-    @Step("Нажать на ссылку Зарегистрироваться на странице входа")
-    public void clickRegisterLink(){
-        waitHelper.waitForClickable(registerLink).click();
-    }
-
-    @Step("Нажать на ссылку Восстановить пароль")
-    public void clickForgotPasswordLink(){
-        waitHelper.waitForClickable(forgotPasswordLink).click();
     }
 
     @Step("Авторизоваться пользователем")
