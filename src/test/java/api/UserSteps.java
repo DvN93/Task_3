@@ -13,7 +13,7 @@ public class UserSteps {
 
     @Step("Создать пользователя через API")
     public Response create(User user) {
-        return given().baseUri(BASE_URL).contentType(ContentType.JSON).body(user)
+        return given().baseUri(BASE_URI).contentType(ContentType.JSON).body(user)
                 .post(REGISTER_API);
     }
 

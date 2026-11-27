@@ -22,20 +22,20 @@ public class ConstructorTest extends BaseTest{
     public void goToBunsTab(){
         mainPage.clickSaucesTab();
         mainPage.clickBunsTab();
-        assertTrue(mainPage.isBunsTabSelected());
+        assertTrue(mainPage.isBunsTabSelected(), "Вкладки Булки не отобразилась");
     }
 
     @Test
     @DisplayName("Проверка перехода на вкладку Соусы")
     public void goToSaucesTab(){
         mainPage.clickSaucesTab();
-        assertTrue(mainPage.isSaucesTabSelected());
+        assertTrue(mainPage.isSaucesTabSelected(), "Вкладка Соусы не отобразилась");
     }
 
     @Test
     @DisplayName("Проверка перехода на вкладку Начинки")
     public void goToFillingsTab(){
         mainPage.clickFillingsTab();
-        assertTrue(mainPage.isFillingsTabSelected());
+        assertTrue(mainPage.isFillingsTabSelected(), "Вкладка Начинки не отобразилась");
     }
 }

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 import static utils.Constants.REGISTER_URL;
 
-public class RegisterPage extends BasePage {
+public class RegistrationPage extends BasePage {
 
     // Заголовок формы регистрации
     private final By registrationHeader = By.xpath(".//h2[text()='Регистрация']");
@@ -29,12 +29,12 @@ public class RegisterPage extends BasePage {
     // Сообщение о некорректном пароле
     private final By incorrectPassword = By.xpath(".//p[text()='Некорректный пароль']");
 
-    public RegisterPage(WebDriver driver){
+    public RegistrationPage(WebDriver driver){
         super(driver);
     }
 
     @Step("Открыть страницу регистрации")
-    public void openRegisterPage(){
+    public void openRegistrationPage(){
         driver.get(REGISTER_URL);
     }
 
